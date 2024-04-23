@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 ''' Async Generator '''
 import asyncio
 from typing import AsyncGenerator
