@@ -73,3 +73,14 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
     def tearDownClass(cls):
         '''tearDownClass method'''
         cls.get_patcher.stop()
+
+    def test_public_repos(self):
+        """doc doc doc"""
+        github_org_client = GithubOrgClient("google")
+        self.assertEqual(github_org_client.public_repos(), self.expected_repos)
+
+    def test_public_repos_with_license(self):
+        """doc doc doc"""
+        github_org_client = GithubOrgClient("google")
+        self.assertEqual(github_org_client.public_repos(license="apache-2.0"),
+                         self.apache2_repos)
